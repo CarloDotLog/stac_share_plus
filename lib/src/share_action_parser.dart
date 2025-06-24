@@ -160,6 +160,9 @@ class ShareActionModel {
     // this.mailToFallbackEnabled,
   });
 
+  /// Creates a [ShareActionModel] instance from a JSON map.
+  ///
+  /// Expects a map containing keys such as 'text', 'title', 'subject', and optionally 'uri'.
   factory ShareActionModel.fromJson(Map<String, dynamic> json) {
     return ShareActionModel(
       text: json['text'] as String?,
@@ -167,7 +170,9 @@ class ShareActionModel {
       subject: json['subject'] as String?,
       //previewThumbnail: json['previewThumbnail'],
       //sharePositionOrigin: json['sharePositionOrigin'] as Rect?,
-      uri: json['uri'] as Uri?,
+      uri: (json['uri'] is String && json['uri'] != null)
+          ? Uri.tryParse(json['uri'] as String)
+          : null,
       //files: json['files'] as List<XFile>?,
       //fileNameOverrides: json['fileNameOverrides'],
       //downloadFallbackEnabled: json['downloadFallbackEnabled'],
