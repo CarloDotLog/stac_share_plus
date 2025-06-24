@@ -7,23 +7,19 @@
 A [Stac](https://pub.dev/packages/stac) ActionParser to share content with the compatible apps on the device.
 It uses the [share_plus](https://pub.dev/packages/share_plus) plugin.
 
-## Features
+## Getting started
 
 Add this package to your yaml file
 
 ```yaml
 stac_share_plus: 0.0.1
 ```
+
 or exec this command:
 
 ```bash
 flutter pub add stac_share_plus
 ```
-
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
 
 ## Usage
 
@@ -67,6 +63,3 @@ void main() async {
 | title    | `String` | Used as share sheet title where supported                             |
 | subject  | `String` | Used as email subject where supported (e.g. EXTRA_SUBJECT on Android) |
 | uri      | `String` | Share a URI.                                                          |
-
-
-git config --global user.email "you@example.com" git config --global user.name "Your Name"
